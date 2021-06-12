@@ -30,7 +30,7 @@ npm run deploy # git commit 안해도 변경 됨
 ```
 - 깃헙에서 다음 정보 확인 가능
 ![](gh-pages-make-images/0b47b20e.png)
-- 다음과 같이 settings > pages 에서 정보 변경
+- 다음과 같이 settings > pages 에서 정보 변경 #이 때 커밋 생기니까, git pull해줘서 로컬 변경해줘야 함
 ![](gh-pages-make-images/465710f8.png)
 - https://devlog.june.gd 에 접속하여 확인
 ![](gh-pages-make-images/aac90f76.png)
