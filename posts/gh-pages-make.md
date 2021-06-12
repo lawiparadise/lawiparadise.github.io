@@ -26,7 +26,7 @@ npm install gh-pages --save-dev
 
 ## 4. 마지막으로 깃헙에 배포
 ```shell
-npm run deploy
+npm run deploy # git commit 안해도 변경 됨
 ```
 - 깃헙에서 다음 정보 확인 가능
 ![](gh-pages-make-images/0b47b20e.png)
@@ -34,3 +34,22 @@ npm run deploy
 ![](gh-pages-make-images/465710f8.png)
 - https://devlog.june.gd 에 접속하여 확인
 ![](gh-pages-make-images/aac90f76.png)
+  
+- 로컬에서 확인은
+```shell
+yarn start # 내 꺼에 이미 yarn 설치되어 있음
+```
+
+## 5. npm run deploy 할 때마다 CNAME이 devlog.june.gd 에서 lawiparadise.github.io 로 풀리게 됨
+```shell
+vim CNAME
+devlog.june.gd
+```
+```shell
+vim package.json
+"scripts": {
+  ...
+  "predeploy": "npm run build && cp CNAME build/CNAME",
+  ...
+},
+```
